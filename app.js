@@ -8,6 +8,14 @@ function asignarTextoElemento(elemento, texto) {
     elementoHTML.innerHTML = texto;
 }
 
+function condicionesIniciales(){
+    asignarTextoElemento('h1','Juego de los números secretos!');
+    asignarTextoElemento('p',`Indica un numero del 1 al ${numeroMaximo}`);
+    numeroSecreto = generarNumeroSecreto();
+    intentos = 1;
+    console.log(numeroSecreto);    
+}
+
 function verificarIntento() {
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
 
